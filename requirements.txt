@@ -4,3 +4,8 @@ matplotlib
 google-generativeai
 pandas
 numpy
+python-dotenv
+Pillow
+pillow-heif
+jupyter
+ipywidgets

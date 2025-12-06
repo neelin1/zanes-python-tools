@@ -47,3 +47,6 @@ wheels/
 *.bak
 *.swp
 *.swo
+
+# Generated output
+scripts/nano-banana/images/outputs/
