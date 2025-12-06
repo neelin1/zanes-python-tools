@@ -89,3 +89,10 @@ To use multiple reference images:
 ```bash
 python scripts/nano-banana/main.py "Combine these two animals" --input-images scripts/nano-banana/images/inputs/cat.jpg scripts/nano-banana/images/inputs/dog.jpg
 ```
+
+##### Supported Parameters
+
+-   **Max Input Images**: Up to 14 reference images can be used for image-to-image generation.
+-   **Supported Input Formats**: `PNG`, `JPEG`, `WEBP`, `HEIC`. (Note: `.heic` files are automatically converted to `.png` before processing).
+-   **Supported Aspect Ratios**: `"1:1"`, `"2:3"`, `"3:2"`, `"3:4"`, `"4:3"`, `"4:5"`, `"5:4"`, `"9:16"`, `"16:9"`, `"21:9"`
+-   **Supported Resolutions**: `"1K"`, `"2K"`, `"4K"`
