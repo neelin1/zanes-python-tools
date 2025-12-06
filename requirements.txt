@@ -1,0 +1,6 @@
+anthropic
+openai
+matplotlib
+google-generativeai
+pandas
+numpy
