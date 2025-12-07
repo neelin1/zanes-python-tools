@@ -1,6 +1,6 @@
 # Tools Playground
 
-This repository is a playground for various Python scripts. The goal is to keep scripts organized and their dependencies isolated using a virtual environment.
+This repository is a playground for various Python scripts. The goal is to keep scripts organized and in one place thats easily accessible by AI CLI Agents
 
 ## Set-up
 
