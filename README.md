@@ -27,9 +27,24 @@ Before running any scripts or installing dependencies, activate the virtual envi
 
 You'll know it's active when `(tools)` appears at the beginning of your terminal prompt.
 
-### 2. Installation of Dependencies
+### 2. API Key Setup
+
+Create a `.env` file in the root of the project to store your Gemini API key.
+
+```bash
+touch .env
+```
+
+Now, open the `.env` file and add the following line, replacing `YOUR_GEMINI_API_KEY` with your actual key:
+
+```
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+```
+
+### 3. Installation of Dependencies
 
 After activating your virtual environment, install the required Python packages using `pip` and the `requirements.txt` file.
+
 
 ```bash
 pip install -r requirements.txt

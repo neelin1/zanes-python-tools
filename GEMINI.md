@@ -45,23 +45,9 @@ The `shared/` directory contains code that is designed to be reusable across dif
 
 ### Environment Setup
 
-1. Create a virtual environment:
-   ```bash
-   python3 -m venv tools
-   ```
-2. Activate it:
-   ```bash
-   source tools/bin/activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Create a `.env` file in the project root and add your Gemini API key:
-   ```
-   GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
-   ```
-   Replace `YOUR_GEMINI_API_KEY` with your actual API key.
+If you encounter issues related to dependencies, first ensure the dependencies are installed with "pip install -r requirements.txt".
+
+If there are issues with api keys, ensure that the `.env` file is correctly configured (need GEMINI_API_KEY). For detailed, first-time setup instructions, please refer to the `README.md` file.
 
 ### Nano Banana CLI Usage
 
