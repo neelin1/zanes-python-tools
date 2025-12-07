@@ -22,9 +22,9 @@ This file provides guidance to coding agents when working with code in this repo
 
 The `shared/` directory contains code that is designed to be reusable across different scripts.
 
-- **`shared/gemini/client.py`**: Contains the `initialize_gemini` function, which sets up the Gemini client using the API key from the `.env` file. This should be used by any script that needs to interact with the Gemini API.
+- **`shared/gemini/client.py`**: Contains the `initialize_gemini` function, which sets up the Gemini client using the API key from the `.env` file. This should be used by any script that needs to interact with the Gemini API (using the `google-genai` library).
 
-- **`shared/gemini/image_generation.py`**: Provides high-level functions for generating images.
+- **`shared/gemini/image_generation.py`**: Provides high-level functions for generating images using the `gemini-3-pro-image-preview` model.
   - `generate_images_from_text()`: For text-to-image generation.
   - `generate_images_from_images()`: For image-to-image generation with one or more reference images.
 
@@ -62,37 +62,45 @@ The `shared/` directory contains code that is designed to be reusable across dif
 
 This script generates images using the Gemini API. All generated images are saved in the `scripts/nano-banana/images/outputs/` directory.
 
+- When you are iterating on a query, it is often useful to use the previous output as input.
+
 ##### Text-to-Image
+
 Generated images will be saved in `scripts/nano-banana/images/outputs/`.
 
 To generate a single image with a specific aspect ratio and resolution:
+
 ```bash
 # Output will be saved as scripts/nano-banana/images/outputs/city.png
 python scripts/nano-banana/main.py "A futuristic cityscape" --aspect-ratio "16:9" --resolution "2K" --output-file "city.png"
 ```
 
 To generate multiple images:
+
 ```bash
 # Output will be saved as forest_pics_0.png, forest_pics_1.png, etc.
 python scripts/nano-banana/main.py "A magical forest" --num-images 4 --output-file "forest_pics"
 ```
 
 ##### Image-to-Image
+
 Place your input images in the `scripts/nano-banana/images/inputs/` directory.
 
 To use a single reference image:
+
 ```bash
 python scripts/nano-banana/main.py "Make this car look like it's flying" --input-images scripts/nano-banana/images/inputs/car.jpg
 ```
 
 To use multiple reference images:
+
 ```bash
 python scripts/nano-banana/main.py "Combine these two animals" --input-images scripts/nano-banana/images/inputs/cat.jpg scripts/nano-banana/images/inputs/dog.jpg
 ```
 
 ##### Supported Parameters
 
--   **Max Input Images**: Up to 14 reference images can be used for image-to-image generation.
--   **Supported Input Formats**: `PNG`, `JPEG`, `WEBP`, `HEIC`. (Note: `.heic` files are automatically converted to `.png` before processing).
--   **Supported Aspect Ratios**: `"1:1"`, `"2:3"`, `"3:2"`, `"3:4"`, `"4:3"`, `"4:5"`, `"5:4"`, `"9:16"`, `"16:9"`, `"21:9"`
--   **Supported Resolutions**: `"1K"`, `"2K"`, `"4K"`
+- **Max Input Images**: Up to 14 reference images can be used for image-to-image generation.
+- **Supported Input Formats**: `PNG`, `JPEG`, `WEBP`, `HEIC`. (Note: `.heic` files are automatically converted to `.png` before processing).
+- **Supported Aspect Ratios**: `"1:1"`, `"2:3"`, `"3:2"`, `"3:4"`, `"4:3"`, `"4:5"`, `"5:4"`, `"9:16"`, `"16:9"`, `"21:9"`
+- **Supported Resolutions**: `"1K"`, `"2K"`, `"4K"`

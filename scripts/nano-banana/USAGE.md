@@ -1,6 +1,6 @@
 # How to Use `nano-banana`
 
-This script generates images using the Gemini API. All generated images are saved in the `scripts/nano-banana/images/outputs/` directory.
+This script generates images using the Gemini API (via the `google-genai` library and the `gemini-3-pro-image-preview` model). All generated images are saved in the `scripts/nano-banana/images/outputs/` directory.
 
 ## Command-Line Usage
 

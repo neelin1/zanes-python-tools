@@ -1,7 +1,9 @@
 anthropic
 openai
 matplotlib
-google-generativeai
+google-genai
+websockets
+tenacity
 pandas
 numpy
 python-dotenv
