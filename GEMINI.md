@@ -57,6 +57,11 @@ The `shared/` directory contains code that is designed to be reusable across dif
    ```bash
    pip install -r requirements.txt
    ```
+4. Create a `.env` file in the project root and add your Gemini API key:
+   ```
+   GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+   ```
+   Replace `YOUR_GEMINI_API_KEY` with your actual API key.
 
 ### Nano Banana CLI Usage
 

@@ -43,12 +43,14 @@ All Python scripts should reside in the `scripts/` directory. Each script can be
 
 The `nano-banana` script is a tool for generating images using the Google Gemini API. It supports text-to-image, image-to-image, and multi-image prompts, with options for aspect ratio and resolution.
 
-It can be used in two ways:
--   **CLI Usage**: Run the script from your terminal to generate images. For example:
-    ```bash
-    python scripts/nano-banana/main.py "A beautiful oil painting of a sunset over the ocean" --aspect-ratio "16:9"
-    ```
--   **Jupyter Notebook**: For a more interactive experience, open and run the cells in `scripts/nano-banana/playground.ipynb`.
+It can be used in three ways:
+
+- **AI CLI USAGE**: Recommended way. Enter something like, "please upscale this using nanobananba /Users/neelin2/coding/tools/scripts/nano-banana/images/inputs/ranier.webp", and Claude Code will do a pretty good job at running the script for you. Claude code, Gemini CLI, and Codex CLI are supported. Specifying aspect ratio and resolution is often useful.
+- **CLI Usage**: Run the script from your terminal to generate images. For example:
+  ```bash
+  python scripts/nano-banana/main.py "A beautiful oil painting of a sunset over the ocean" --aspect-ratio "16:9"
+  ```
+- **Jupyter Notebook**: For a more interactive experience, open and run the cells in `scripts/nano-banana/playground.ipynb`.
 
 For detailed instructions on all the available commands and parameters, please see the [**USAGE.md**](scripts/nano-banana/USAGE.md) file inside the `nano-banana` directory.
 
